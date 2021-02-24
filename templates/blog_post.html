@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+{% block title %} 
+    {{ page.title }} - {{ config.title}} 
+{% endblock title %} 
+
+{% block custom_head %}
+<link rel="stylesheet" href="/css/blog-post.css" />
+<script src="/js/reading-progress.js" defer></script>
+{% endblock custom_head %} 
+ 
+{% block content %}
+<div id="post">
+    <progress id="reading-progress" value="0" max="100"></progress>
+    <p id="post-date">{{ page.date }}</p>
+    <h1 id="post-title">{{ page.title }}</h1>
+    <img src="{{ macros::get_cover(page=page) }}" id="post-cover">
+    <div id="post-content">{{ page.content | safe }}</div>
+</div>
+{% endblock content %}

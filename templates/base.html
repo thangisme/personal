@@ -1,0 +1,76 @@
+{% import "macros.html" as macros %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/normalize.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    {% set this = '' %}
+    {% if page %}
+      {% set this = page %}
+    {% elif section %}
+      {% set this = section %}
+    {% endif %}
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="
+    {% if page.title %}
+      {{page.title}} - {{config.title}}
+    {% else %}
+      {{config.title}}
+    {% endif %}
+      " />
+    <meta
+      name="description"
+      content="{{macros::get_description(page=this)}}"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ config.base_url }}" />
+    <meta property="og:title" content="
+    {% if page.title %}
+      {{page.title}} - {{config.title}}
+    {% else %}
+      {{ config.title }}
+    {% endif %}" />
+    <meta property="og:description" content="{{ macros::get_description(page=this)}}" />
+    <meta property="og:image" content="{{ macros::get_cover(page=this) }}" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ config.base_url }}" />
+    <meta property="twitter:title" content="
+    {% if page.title %}
+      {{page.title}} - {{config.title}}
+    {% else %}
+      {{ config.title }}
+    {% endif %}" />
+    <meta property="twitter:description" content="{{ macros::get_description(page=this)}}" />
+    <meta property="twitter:image" content="{{macros::get_cover(page=this)}}"/>
+    {% block custom_head %}{% endblock %}
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <a href="{{ config.base_url }}"
+          ><img src="/imgs/white-logo.svg" alt="Logo" id="vector-logo"
+        /></a>
+      </header>
+      <main>{% block content %} {% endblock %}</main>
+      <footer>
+        <p id="copyright">@2021 - All right reserved.</p>
+      </footer>
+      {% if config.extra.panelbear %}
+        <!-- Panelbear Analytics - We respect your privacy -->
+        <script async src="https://cdn.panelbear.com/analytics.js?site=DycIbjNrMzh"></script>
+        <script>
+          window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+          panelbear('config', { site: '{{config.extra.panelbear_id}}' });
+        </script>
+      {% endif %}
+    </div>
+  </body>
+</html>

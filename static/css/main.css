@@ -1,0 +1,152 @@
+body {
+    background-color: #16181a;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+}
+#container {
+    margin: 2% 3%; 
+}
+#vector-logo {
+    width: 2.5rem;
+    height: auto;
+}
+.mark, mark {
+    background-color: #fff3bf;
+    color: #14171a;
+    padding: 3px;
+    border-radius: 3px;
+}
+.highlight {
+    background-color: #fae899;
+    color: #14171a;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+a {
+    color: #fff;
+}
+pre {
+    overflow: scroll;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+blockquote {
+    margin: 0;
+    padding: 0px 15px;
+    border-left: 2px solid #fff;
+}
+table {
+    min-width: 100%;
+    overflow: scroll;
+}
+th, td {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #fff;
+}
+button, .button {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 15px;
+    outline: none;
+    margin: 5px 0;
+    text-decoration: none;
+}
+.outline-btn {
+    background: none;
+    border: 2px solid #fff;
+    padding: 4px 15px;
+    color: #fff;
+}
+.button:hover, button:hover {
+    opacity: 0.9;
+}
+.button:active, button:active {
+    transform: scale(0.95);
+}
+
+.red-bg {
+    background-color: #e03131;
+}
+.red-text {
+    color: #e03131;
+}
+.pink-bg {
+    background: #d6336c;
+}
+.pink-text {
+    color: #d6336c;
+}
+.violet-bg {
+    background-color: #6741d9;
+}
+.violet-text {
+    color: #6741d9;
+}
+.blue-bg {
+    background-color: #228be6;
+}
+.blue-text {
+    background-color: #228be6;
+}
+.teal-bg {
+    background-color: #38d9a9;
+}
+.teal-text {
+    color: #38d9a9;
+}
+.green-bg {
+  background-color: #37b24d;  
+}
+.green-text {
+    color: #37b24d;
+}
+.yellow-bg {
+    background-color: #fab005;
+}
+.yellow-text {
+    color: #fab005;
+}
+.dark-bg {
+    background-color: #111;
+}
+.dark-text {
+    color: #111;
+}
+.white-bg {
+    background-color: #f5f5dc;
+}
+.white-text {
+    color: #f5f5dc;
+}
+.footnote-definition-label {
+    top: 0;
+    font-size: 100%;
+    line-height: inherit;
+    float: left;
+}
+.footnote-definition-label::after {
+    content: ".";
+    margin-right: 3px;
+}
+@media screen and (min-width: 1000px){
+    #container {
+        margin: 2% 8%;
+    }
+    main {
+        max-width: 60%;
+        margin: 2% auto;
+    }
+}
+@media screen and (max-width: 550px){
+    #container {
+        margin: 5% 8%;
+    }
+}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+    404 - Page not found
+{% endblock title %}
+
+{% block content %}
+<pre>
+$$\   $$\  $$$$$$\  $$\   $$\ 
+$$ |  $$ |$$$ __$$\ $$ |  $$ |
+$$ |  $$ |$$$$\ $$ |$$ |  $$ |
+$$$$$$$$ |$$\$$\$$ |$$$$$$$$ |
+\_____$$ |$$ \$$$$ |\_____$$ |
+      $$ |$$ |\$$$ |      $$ |
+      $$ |\$$$$$$  /      $$ |
+      \__| \______/       \__|                
+</pre>
+<h1>Oops, It's 404.</h1>
+<h3>The page you are looking for was not found :(</h3>
+<a href="/" class="button blue-bg">Home</a>
+<style>
+    pre {
+        overflow: hidden;
+    }
+    @media screen and (max-width: 400px){
+        pre {
+            font-size: 0.8rem;
+        }
+    }
+</style>
+{% endblock content %}

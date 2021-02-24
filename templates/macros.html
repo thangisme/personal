@@ -1,0 +1,26 @@
+{% macro get_cover(page='') %}
+    {% if page.extra.cover %}
+        {{ resize_image(path=page.extra.cover, width=1920,height=1080, op='fit') }}
+    {% elif page %}
+        {% set isFound = false %}
+        {% for asset in page.assets %}
+            {% if asset is matching("cover.(jpg|png)$") %}
+                {{ resize_image(path=asset, width=1920, height=1080, op='fit') }}
+            {% endif %}
+        {% endfor %}
+        {% if not isFound and page.title %}
+            https://cdn.statically.io/og/{{page.title}}
+        {% else %}
+            {{ get_url(path="imgs/og.jpg") }}
+        {% endif %}
+    {% endif %} 
+{% endmacro get_cover %}
+{% macro get_description(page) %}
+    {% if page.extra.custom_description %}
+        {{ page.extra.custom_description }}
+    {% elif page.extra.excerpt %}
+        {{ page.extra.excerpt }}
+    {% else %}
+        {{ config.description }}
+    {% endif %}
+{% endmacro get_description %}

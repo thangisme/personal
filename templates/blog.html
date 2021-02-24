@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}
+    Writing - {{ config.title }}
+{% endblock title %}
+
+{% block custom_head %}
+    <link rel="stylesheet" href="/css/blog.css">
+{% endblock custom_head %}
+
+{% block content %}
+<div id="blog-container">
+    <div id="blog-header">
+        <h1 id="heading">Writing</h1>
+        <a href="/atom.xml" id="subscribe">
+            <img src="/imgs/rss.svg" id="rss-icon">Subscribe</a>
+    </div>
+    {% set_global postCount = 0 %}
+    {% for page in paginator.pages %}
+        {% set_global postCount = postCount + 1 %}
+        <div class="post">
+            <h4 class="post-date">{{ page.date }}</h4>
+            <h2 class="post-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+            <img src="{{ macros::get_cover(page=page) }}" class="post-cover">
+            {% if page.extra.excerpt %}
+            <p class="post-excerpt">{{ page.extra.excerpt }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <nav id="pagination">
+        {% if paginator.previous %}
+            <a href="{{ paginator.previous }}" id="previous" class="button">Previous</a>
+        {% endif %}
+        {% if paginator.next %}
+            <a href="{{ paginator.next }}" id="next" class="button">Next</a>
+        {% endif %}
+    </nav>
+    {% if postCount == 0 %}
+        <div id="no-post">
+            <img src="/imgs/frown.svg" alt="" id="sad-icon">
+            <p>No post has been published.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock content %}

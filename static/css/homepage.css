@@ -1,0 +1,50 @@
+section {
+    margin: 2% 5%;
+}
+.section-content {
+    font-size: 1.5rem;
+}
+#hi {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+#short-intro {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+#writing {
+    margin :0;
+}
+#writing {
+    font-size: 1.5rem;
+}
+.section-header {
+    font-weight: 550;
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+}
+#sites-list {
+    list-style-type: none;
+    margin-left: 5%;
+    margin-top: 5px;
+    font-size: 1.3rem;
+}
+.site::before {
+    content: "=>";
+    margin-right: 5px;
+}
+@media screen and (max-width: 550px){
+    section {
+        margin: 2% 0;;
+    }
+    #hi {
+        font-size: 1.2rem;
+    }
+    #short-intro {
+        font-size:1.6rem;
+    }
+    .section-content {
+        font-size: 1.3rem;
+    }
+}
