@@ -1,8 +1,8 @@
 # General infos
 base_url = "https://quangthang.men"
 title = "Quang Thắng"
-description = "Personal site of a lazy guy."
-default_language = "en"
+description = "Personal site of Quang Thắng, a high school student interested in programming."
+default_language = "vi"
 
 # Feed
 generate_feed = true
@@ -21,6 +21,12 @@ highlight_theme = "one-dark"
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
+
+
+# Languages
+languages = [
+    {code = "en", feed = true}
+]
 
 [extra]
 # Put all your custom variables here

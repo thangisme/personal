@@ -2,7 +2,7 @@
 {% import "macros.html" as macros %}
 
 {% block title %}
-    Writing - {{ config.title }}
+    {{ section.title }} - {{ config.title }}
 {% endblock title %}
 
 {% block custom_head %}
@@ -12,9 +12,9 @@
 {% block content %}
 <div id="blog-container">
     <div id="blog-header">
-        <h1 id="heading">Writing</h1>
+        <h1 id="heading">Bài viết</h1>
         <a href="/atom.xml" id="subscribe">
-            <img src="/imgs/rss.svg" id="rss-icon">Subscribe</a>
+            <img src="/imgs/rss.svg" id="rss-icon"><span id="subscribe-text">Đăng kí</span></a>
     </div>
     {% set_global postCount = 0 %}
     {% for page in paginator.pages %}
@@ -30,17 +30,25 @@
     {% endfor %}
     <nav id="pagination">
         {% if paginator.previous %}
-            <a href="{{ paginator.previous }}" id="previous" class="button">Previous</a>
+            <a href="{{ paginator.previous }}" id="previous" class="button"></a>
         {% endif %}
         {% if paginator.next %}
-            <a href="{{ paginator.next }}" id="next" class="button">Next</a>
+            <a href="{{ paginator.next }}" id="next" class="button"></a>
         {% endif %}
     </nav>
     {% if postCount == 0 %}
         <div id="no-post">
             <img src="/imgs/frown.svg" alt="" id="sad-icon">
-            <p>No post has been published.</p>
+            <p>Chưa có bài viết nào được đăng.</p>
         </div>
     {% endif %}
+    <script type="text/javascript">
+        var userLang = navigator.language || navigator.userLanguage; 
+        if(userLang != "vi-VN"){
+            document.querySelector("#heading").textContent = "Writing";
+            document.querySelector("#subscribe-text").textContent = "Subscribe";
+            document.querySelector("#no-post p").textContent = "No post has been published.";
+        }
+    </script>
 </div>
 {% endblock content %}

@@ -6,11 +6,10 @@ section {
 }
 #hi {
     font-size: 1.5rem;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 #short-intro {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 0 0 15px 0;
     font-size: 2rem;
 }
 #writing {
@@ -22,17 +21,10 @@ section {
 .section-header {
     font-weight: 550;
     font-size: 1.7rem;
-    margin-bottom: 5px;
+    margin: 1rem 0;
 }
 #sites-list {
-    list-style-type: none;
-    margin-left: 5%;
-    margin-top: 5px;
     font-size: 1.3rem;
-}
-.site::before {
-    content: "=>";
-    margin-right: 5px;
 }
 @media screen and (max-width: 550px){
     section {
