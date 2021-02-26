@@ -11,7 +11,7 @@ template = "index.html"
         I'm <em>a #CodeNewBie,a #FOSSLover</em>, and I love privacy-friendly products.
         I am trying my best to become a professional web developer in the near future.
     </p>   
-    <a id="writing" href="/writing">
+    <a id="writing" href="/en/writing">
         <button class="violet-bg white-text">Check out my writing</button>
     </a>
 </section>

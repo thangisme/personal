@@ -1,12 +1,6 @@
 +++
 title = "Quang Thắng"
 +++
-<script type="text/javascript">
-var userLang = navigator.language || navigator.userLanguage; 
-if(userLang != "vi-VN"){
-    window.location.href = "/en";
-}
-</script>
 <section id="intro">
     <p id="hi">Xin chào!</p>
     <p id="short-intro">

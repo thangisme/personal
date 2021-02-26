@@ -27,6 +27,19 @@ build_search_index = false
 languages = [
     {code = "en", feed = true}
 ]
+[translations.vi]
+writing = "Bài viết"
+next_page = "Trang sau"
+previous_page = "Trang trước"
+subscribe = "Đăng kí"
+no_post = "Chưa có bài viết nào được đăng."
+
+[translations.en]
+writing = "Writing"
+next_page = "Next page"
+previous_page = "Previous page"
+subscribe = "Subscribe"
+no_post = "No post has been published."
 
 [extra]
 # Put all your custom variables here

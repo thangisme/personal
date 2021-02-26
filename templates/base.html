@@ -58,6 +58,21 @@
         <a href="{{ config.base_url }}"
           ><img src="/imgs/white-logo.svg" alt="Logo" id="vector-logo"
         /></a>
+        <ul id="languages">
+          {% if this.translations %}
+            {% for translation in this.translations %}
+              <li class="language"><a href="{{translation.permalink}}">
+                {% if translation.lang == "vi" %}
+                  Tiếng Việt
+                {% elif translation.lang == "en" %}
+                  English
+                {% else %}  
+                  {{translation.lang}}
+                {% endif %}
+              </a></li>
+            {% endfor %}
+          {% endif %}
+        </ul>
       </header>
       <main>{% block content %} {% endblock %}</main>
       <footer>

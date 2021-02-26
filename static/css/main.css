@@ -8,6 +8,21 @@ body {
 #container {
     margin: 2% 3%; 
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#languages {
+    list-style-type: none;
+}
+.language {
+    display: inline-block;
+    margin-left: 10px;
+}
+.language a {
+    text-decoration: none;
+}
 #vector-logo {
     width: 2.5rem;
     height: auto;

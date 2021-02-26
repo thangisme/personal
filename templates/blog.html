@@ -12,9 +12,9 @@
 {% block content %}
 <div id="blog-container">
     <div id="blog-header">
-        <h1 id="heading">Bài viết</h1>
+        <h1 id="heading">{{trans(key = "writing", lang = section.lang)}}</h1>
         <a href="/atom.xml" id="subscribe">
-            <img src="/imgs/rss.svg" id="rss-icon"><span id="subscribe-text">Đăng kí</span></a>
+            <img src="/imgs/rss.svg" id="rss-icon"><span id="subscribe-text">{{ trans(key="subscribe", lang = section.lang) }}</span></a>
     </div>
     {% set_global postCount = 0 %}
     {% for page in paginator.pages %}
@@ -30,25 +30,27 @@
     {% endfor %}
     <nav id="pagination">
         {% if paginator.previous %}
-            <a href="{{ paginator.previous }}" id="previous" class="button"></a>
+            <a href="{{ paginator.previous }}" id="previous" class="button">
+                {{ trans(key = "previous_page", lang = section.lang)}}
+            </a>
         {% endif %}
         {% if paginator.next %}
-            <a href="{{ paginator.next }}" id="next" class="button"></a>
+            <a href="{{ paginator.next }}" id="next" class="button">{{ trans(key="next_page", lang = section.lang)}}</a>
         {% endif %}
     </nav>
     {% if postCount == 0 %}
         <div id="no-post">
             <img src="/imgs/frown.svg" alt="" id="sad-icon">
-            <p>Chưa có bài viết nào được đăng.</p>
+            <p>{{ trans(key="no_post", lang = section.lang) }}</p>
         </div>
     {% endif %}
-    <script type="text/javascript">
+    {#<script type="text/javascript">
         var userLang = navigator.language || navigator.userLanguage; 
         if(userLang != "vi-VN"){
             document.querySelector("#heading").textContent = "Writing";
             document.querySelector("#subscribe-text").textContent = "Subscribe";
             document.querySelector("#no-post p").textContent = "No post has been published.";
         }
-    </script>
+    </script>#}
 </div>
 {% endblock content %}
