@@ -43,9 +43,17 @@ a {
     color: #fff;
 }
 pre {
-    overflow: scroll;
+    overflow: auto;
     border-radius: 5px;
     padding: 10px 15px;
+}
+code {
+    background-color: #2b303b;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+pre code {
+    padding: 0;
 }
 blockquote {
     margin: 0;

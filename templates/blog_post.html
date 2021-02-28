@@ -6,7 +6,6 @@
 
 {% block custom_head %}
 <link rel="stylesheet" href="/css/blog-post.css" />
-<script src="/js/reading-progress.js" defer></script>
 {% endblock custom_head %} 
  
 {% block content %}
@@ -17,4 +16,5 @@
     <img src="{{ macros::get_cover(page=page) }}" id="post-cover">
     <div id="post-content">{{ page.content | safe }}</div>
 </div>
+<script src="/js/blog_post.js" defer></script>
 {% endblock content %}
