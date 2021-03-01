@@ -5,10 +5,10 @@ date = 2021-02-27
 cover = "../static/imgs/bien-va-cac-kieu-du-lieu-co-ban-trong-python.png"
 +++
 
-<div class="highlight red-bg white-text">Bài viết này được viết với mục đích của cố kiến thức, có thể cói nhều sai sót</div>
+<div class="highlight red-bg white-text">Bài viết này được viết với mục đích của cố kiến thức, có thể có nhiều sai sót</div>
 
 ## Biến
-Không như C, C++,... khi khai báo biến trong Python, ta không cần khai bảo kiểu dữ liệu. Tên biến phải tuân theo một số nguyên tắc:
+Không như C, C++,... khi khai báo biến trong Python, ta không cần khai báo kiểu dữ liệu. Tên biến phải tuân theo một số nguyên tắc:
 
 * Chỉ được có các kí tự, số và dấu gạch dưới (_). Tuy nhiên không được bắt đầu bằng số
 * Không có khoảng cách
@@ -94,7 +94,7 @@ Khi chia hai số bất kì, kết quả nhận được luôn có dạng số t
 ```Python
 4 / 2 # 2.0
 ```
-Neus trong phép tính có số thực, kết quả nhận được cũng sẽ là số thực, for sure :3
+Nếu trong phép tính có số thực, kết quả nhận được cũng sẽ là số thực, for sure :3
 ```Python
 1 + 6.5 - 2.3 # 5.2
 ```
