@@ -35,10 +35,10 @@ img {
     background-color: transparent;
 }
 #reading-progress::-webkit-progress-value {
-    background-color: #ffe066;
+    background-color: #585858;
 }
 #reading-progress::-moz-progress-bar {
-    background-color: #ffe066;
+    background-color: #585858;
 }
 @media screen and (min-width: 850px){
     #post {
