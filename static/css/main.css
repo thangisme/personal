@@ -163,9 +163,14 @@ button, .button {
     #container {
         margin: 2% 8%;
     }
+    main {
+        max-width: 70%;
+        margin: 2% auto;
+    }
 }
 @media screen and (max-width: 550px){
     #container {
         margin: 5% 8%;
     }
+
 }
