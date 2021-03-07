@@ -44,13 +44,5 @@
             <p>{{ trans(key="no_post", lang = section.lang) }}</p>
         </div>
     {% endif %}
-    {#<script type="text/javascript">
-        var userLang = navigator.language || navigator.userLanguage; 
-        if(userLang != "vi-VN"){
-            document.querySelector("#heading").textContent = "Writing";
-            document.querySelector("#subscribe-text").textContent = "Subscribe";
-            document.querySelector("#no-post p").textContent = "No post has been published.";
-        }
-    </script>#}
 </div>
 {% endblock content %}
