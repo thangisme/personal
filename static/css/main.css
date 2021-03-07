@@ -163,10 +163,6 @@ button, .button {
     #container {
         margin: 2% 8%;
     }
-    main {
-        max-width: 60%;
-        margin: 2% auto;
-    }
 }
 @media screen and (max-width: 550px){
     #container {
