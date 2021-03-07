@@ -11,7 +11,7 @@ generate_feed = true
 minify_html = false
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+compile_sass = false
 
 
 # Whether to do syntax highlighting
@@ -44,6 +44,6 @@ no_post = "No post has been published."
 [extra]
 # Put all your custom variables here
 
-# Analytics
-panelbear = true
-panelbear_id = "DycIbjNrMzh"
+analytics_enabled = true
+analytics_id = "ZwSg9rf6GA"
+

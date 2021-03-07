@@ -76,15 +76,14 @@
       </header>
       <main>{% block content %} {% endblock %}</main>
       <footer>
-        <p id="copyright">@2021 - All right reserved.</p>
+        <p id="copyright">@2021 - All right rdeserved.</p>
       </footer>
-      {% if config.extra.panelbear %}
-        <!-- Panelbear Analytics - We respect your privacy -->
-        <script async src="https://cdn.panelbear.com/analytics.js?site=DycIbjNrMzh"></script>
-        <script>
-          window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
-          panelbear('config', { site: '{{config.extra.panelbear_id}}' });
-        </script>
+      {% if config.extra.analytics_enabled %}
+        <script 
+        data-host="https://microanalytics.io" 
+        data-dnt="false" 
+        src="https://microanalytics.io/js/script.js" 
+        id="{{config.extra.analytics_id}}" async defer></script>
       {% endif %}
     </div>
   </body>
