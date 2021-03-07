@@ -66,9 +66,18 @@ width: 5rem;
 #sad-icon {
     width: 45%;
 }
-@media screen and (min-width: 650px){
-    #blog-container {
-        max-width: 75%;
-        margin: 0 auto;
-    }
+
+/* Microblog */
+.micropost {
+    border: 3px solid #fff;
+    margin-bottom: 3vh;
+    padding: 0px 15px;
+}
+.micropost img {
+    width: 100%;
+}
+.micropost .act {
+    background: none;
+    padding: 0;
+    margin-right: 8px;
 }

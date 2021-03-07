@@ -3,7 +3,6 @@
 }
 #post-date {
     font-size: 1rem;
-    margin-bottom: 0;
     color: #c4c2c2;
 }
 #post-title {
@@ -39,10 +38,4 @@ img {
 }
 #reading-progress::-moz-progress-bar {
     background-color: #585858;
-}
-@media screen and (min-width: 850px){
-    #post {
-        margin: 0 auto;
-        max-width: 85%;
-    }
 }
