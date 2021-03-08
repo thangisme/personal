@@ -29,6 +29,7 @@ template = "index.html"
     <h3 class="section-header">Fun facts</h3>
     <div class="section-content">
         <ul id="facts">
+             <li class="fact">I have a simple microblog <a href="/microblog">here</a></li>
             <li class="fact">I'm so lazy :></li>
             <li class="fact">Some people said that I'm unfriendly. No, I'm not! I'm an introvert,so it's hard for me to talk with people I don't know.</li>
             <li class="fact">I originally wrote this in English because I don't want my friends read it :)</li>

@@ -26,6 +26,7 @@ title = "Quang Thắng"
     <h3 class="section-header">Một vài điều thú vị</h3>
     <div class="section-content">
         <ul id="facts">
+            <li class="fact">Mình có trang microblog <a href="/microblog">tại đây</a></li>
             <li class="fact">Mình rất chi là lười :></li>
             <li class="fact">Nhiều người bảo mình khó gần. Họ đâu biết rằng mình thuộc kiểu người hướng nội, rất khó để bắt chuyện trước, đặc biệt với người lạ :(</li>
             <li class="fact">Mình không muốn bạn bè đọc được những dòng này :)</li>
